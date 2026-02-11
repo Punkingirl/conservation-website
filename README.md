@@ -1,200 +1,182 @@
-# Millars Beach Conservation Trust Website
+Millars Beach Conservation Trust Website
 
-A modern conservation website I built for the Millars Beach Conservation Trust during my studies. This project combines my passion for environmental conservation with web development skills.
+A full-stack conservation website built during my studies for the Millars Beach Conservation Trust in New Zealand. This project combines my interest in environmental conservation with modern web development.
 
-##  About the Project
+The website helps the trust connect with volunteers, donors, and the local community, while providing an easy way to share conservation updates and media.
 
-This is a full-stack website for a real conservation project in New Zealand. The Millars Beach Conservation Trust works to restore indigenous flora and fauna on the Millars Beach Peninsula through pest reduction. I built this website to help them connect with volunteers, donors, and the community.
+About the Project
 
-### What I Built
-- **Responsive website** that works on all devices
-- **Interactive gallery** to showcase conservation photos and videos
-- **Blog system** for sharing conservation updates
-- **Contact forms** for volunteers and donors
-- **Donation platform** to support their work
-- **Admin dashboard** for content management
-- **Audio player** for native bird sounds
+The Millars Beach Conservation Trust works to restore indigenous flora and fauna on the Millars Beach Peninsula through pest reduction and community involvement.
 
-## 🛠 Tech Stack I Used
+This website was built as a real-world project to support their work by:
 
-### Frontend
-- **Next.js 14** - Latest React framework with App Router
-- **TypeScript** - For better code quality and fewer bugs
-- **Tailwind CSS** - For responsive design and modern styling
-- **React Hook Form** - For form handling and validation
+-Sharing conservation updates
 
-### Backend
-- **Django** - Python web framework for the backend
-- **SQLite** - Database (can be upgraded to PostgreSQL for production)
-- **Django REST Framework** - For API endpoints
+-Showcasing photos, videos, and native bird sounds
 
-### Deployment
-- **Vercel** - For hosting the frontend
-- **GitHub** - For version control and hosting media files
-- **External Media Hosting** - Solved a tricky deployment issue with GitHub raw URLs
+-Providing contact and donation options
 
-## Problems I Solved
+Features
 
-### 1. The Image Loading Problem
-**The Challenge**: Images weren't showing up on Vercel deployment
-**What I Learned**: Next.js Image component doesn't work well with external URLs
-**My Solution**: Switched to regular `<img>` tags with GitHub raw URLs
-**Result**: All images now load perfectly! 
+-Fully responsive design (desktop, tablet, mobile)
 
-### 2. External Media Hosting
-**The Challenge**: Large audio/video files (519MB total) were causing deployment issues
-**What I Learned**: Vercel has limits on static file sizes
-**My Solution**: Created automated scripts to upload media to GitHub and use raw URLs
-**Result**: Reliable media hosting with 99.9% uptime
+-Blog system for conservation updates
 
-### 3. Responsive Design
-**The Challenge**: Making it work perfectly on mobile, tablet, and desktop
-**What I Learned**: Mobile-first design is crucial
-**My Solution**: Used Tailwind CSS with custom breakpoints
-**Result**: Seamless experience across all devices
+-Photo and video gallery
 
-##  Project Structure
+-Audio player with native bird sounds
 
-```
+-Contact forms for volunteers and supporters
+
+-Donation page
+
+-Admin dashboard for content management
+
+Tech Stack
+Frontend
+
+-Next.js 14 (App Router)
+
+-TypeScript
+
+-Tailwind CSS
+
+-React Hook Form
+
+Backend
+
+-Django
+
+-Django REST Framework
+
+-SQLite (upgradeable to PostgreSQL)
+
+Deployment and Tools
+
+-Local hosting for now, potentially hosting on AWS 
+
+-GitHub for version control and media hosting
+
+-GitHub raw URLs for external media hosting
+
+Challenges and Solutions
+
+Large Media Hosting
+
+Issue: Audio and video files exceeded Vercel’s static file limits
+
+Solution: Uploaded media to GitHub and referenced them via raw URLs
+
+Result: Stable and reliable media delivery
+
+Responsive Design
+
+Issue: Supporting multiple screen sizes
+
+Solution: Mobile-first design using Tailwind CSS
+
+Result: Smooth experience on all devices
+
+Project Structure
 conservation-website/
-├── app/                          # Next.js pages
-│   ├── page.tsx                  # Homepage
-│   ├── about/                    # About the project
-│   ├── blog/                     # Conservation blog
-│   ├── contact/                  # Contact forms
-│   ├── donate/                   # Donation system
-│   ├── gallery/                  # Photo/video gallery
-│   └── support-us/               # How to help
-├── components/                   # Reusable components
-│   ├── audio-player.tsx          # Custom audio player
-│   ├── static-gallery.tsx        # Image gallery
-│   └── site-header.tsx           # Navigation
-├── conservation_backend/          # Django backend
-│   ├── blog/                     # Blog management
-│   ├── contact/                  # Contact form handling
-│   └── gallery/                  # Media management
-└── public/                       # Static files
-    ├── images/                   # Website images
-    ├── audios/                   # Bird sounds
-    └── videos/                   # Conservation videos
-```
+├── app/                    # Next.js pages
+├── components/             # Reusable components
+├── conservation_backend/   # Django backend
+└── public/                 # Static assets
 
-##  Design Choices
+Design Choices
+Colour Palette
 
-### Color Scheme
-I chose a nature-inspired green palette:
-- **Dark Green** (`#2E7D32`) - Primary color
-- **Sea Green** (`#4CAF50`) - Secondary color
-- **Spring Green** (`#66BB6A`) - Accent color
-- **Charcoal** (`#374151`) - Text color
+Dark Green (#2E7D32)
 
-### Typography
-- **Montserrat** for headings - Modern and bold
-- **Open Sans** for body text - Easy to read
+Sea Green (#4CAF50)
 
-##  How to Run This Project
+Spring Green (#66BB6A)
 
-### Prerequisites
-- Node.js 18+ 
-- Python 3.8+
-- Git
+Charcoal (#374151)
 
-### Frontend Setup
-```bash
-# Clone the repo
+Typography
+
+Montserrat for headings
+
+Open Sans for body text
+
+Getting Started
+Prerequisites
+
+Node.js 18+
+
+Python 3.8+
+
+Git
+
+Frontend Setup
 git clone https://github.com/Punkingirl/conservation-website.git
 cd conservation-website
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
-```
 
-### Backend Setup
-```bash
-# Go to Django folder
+Backend Setup
 cd conservation_backend
-
-# Install Python packages
 pip install -r requirements.txt
-
-# Set up database
 python manage.py migrate
-
-# Start Django server
 python manage.py runserver
-```
 
-##  What I Learned
+Performance and Accessibility
 
-### Technical Skills
-- **Full-stack development** with Next.js and Django
-- **TypeScript** for better code quality
-- **Responsive design** with Tailwind CSS
-- **API integration** between frontend and backend
-- **Deployment** on Vercel with CI/CD
-- **Problem-solving** with external media hosting
+Lighthouse score: 95+
 
-### Soft Skills
-- **Project planning** and architecture design
-- **Problem-solving** when things don't work as expected
-- **Documentation** for future developers
-- **Testing** and debugging strategies
+Load time under 2 seconds
 
-##  Performance Results
+Fully responsive design
 
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices)
-- **Load Time**: Under 2 seconds on slow connections
-- **Mobile Performance**: Optimized for all devices
-- **Accessibility**: WCAG 2.1 AA compliant
+WCAG 2.1 AA compliant
 
-##  Security Features I Implemented
+Security
 
-- **Form validation** on both client and server side
-- **CSRF protection** with Django tokens
-- **Input sanitization** to prevent XSS attacks
-- **HTTPS enforcement** for secure connections
+Client-side and server-side form validation
 
-##  Testing Approach
+CSRF protection with Django
 
-- **Unit tests** for individual components
-- **Integration tests** for API endpoints
-- **Manual testing** across different devices and browsers
-- **Accessibility testing** for inclusive design
+Input sanitisation to prevent XSS
 
-##  Future Improvements I'd Like to Add
+HTTPS enforcement
 
-- **Real-time updates** with WebSockets
-- **Advanced analytics** to track user engagement
-- **PWA features** for offline functionality
-- **Multi-language support** for international users
-- **Advanced CMS** with rich text editing
+Testing
 
-##  How to Contribute
+Unit testing for components
 
-1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Commit with a clear message (`git commit -m 'Add amazing feature'`)
-5. Push to your branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
+API integration testing
 
-##  License
+Manual testing across browsers and devices
 
-This project is licensed under the MIT License.
+Accessibility testing
 
-##  About Me
+Future Improvements
 
-I'm a student developer passionate about combining technology with environmental conservation. This project represents my journey in full-stack development and problem-solving.
+Real-time updates using WebSockets
 
-**Skills I demonstrated:**
-- Full-stack web development
-- Modern JavaScript/TypeScript
-- Responsive design
-- API development
-- Deployment and DevOps
-- Problem-solving and debugging
+User analytics and engagement tracking
 
+Progressive Web App (PWA) features
+
+Multi-language support
+
+Advanced CMS functionality
+
+About Me
+
+I am a student developer interested in building stuff. This project reflects my learning in full-stack development, deployment, and problem-solving.
+
+Skills demonstrated:
+
+Full-stack web development
+
+JavaScript and TypeScript
+
+Responsive design
+
+API development
+
+Deployment and debugging
 
