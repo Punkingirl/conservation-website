@@ -102,7 +102,7 @@ I chose a nature-inspired green palette:
 ### Frontend Setup
 ```bash
 # Clone the repo
-git clone https://github.com/Punkingirl/conservation-website-vercel.git
+git clone https://github.com/Punkingirl/conservation-website.git
 cd conservation-website
 
 # Install dependencies
