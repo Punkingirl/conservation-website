@@ -79,10 +79,10 @@ Result: Smooth experience on all devices
 
 Project Structure
 conservation-website/
-├── app/                    # Next.js pages
-├── components/             # Reusable components
-├── conservation_backend/   # Django backend
-└── public/                 # Static assets
+─ app/                    # Next.js pages
+─ components/             # Reusable components
+─ conservation_backend/   # Django backend
+─ public/                 # Static assets
 
 Design Choices
 Colour Palette
